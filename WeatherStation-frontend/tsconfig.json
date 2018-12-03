@@ -1,0 +1,52 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"allowSyntheticDefaultImports": false,
+		"esModuleInterop": false,
+		"alwaysStrict": true,
+		
+		"target": "es5",
+		"module": "commonjs",
+		"moduleResolution": "node",
+
+		"lib": ["es2015", "es2017", "dom"],
+		"outDir": "build",
+		"watch": true,
+		"sourceMap": true,
+		"jsx": "react",
+		"importHelpers": true,
+
+		"allowJs": true,
+		
+		
+		"paths": {
+			"@root"			: ["./index"],
+			"@root/*"		: ["./*"],
+			"@source"		: ["src/index"],
+			"@source/*"		: ["src/*"],
+			"@src"			: ["src/index"],
+			"@src/*"		: ["src/*"],
+
+			"@components"	: ["src/components/index"],
+			"@components/*"	: ["src/components/*"],
+			"@models"		: ["src/models/index"],
+			"@models/*"		: ["src/models/*"],
+			"@scenes"		: ["src/scenes/index"],
+			"@scenes/*"		: ["src/scenes/*"],
+			"@styles"		: ["src/styles/index"],
+			"@styles/*"		: ["src/styles/*"],
+			"@system"		: ["src/system/index"],
+			"@system/*"		: ["src/system/*"],
+			"@utils"		: ["src/utils/index"],
+			"@utils/*"		: ["src/utils/*"],
+			"@views"		: ["src/views/index"],
+			"@views/*"		: ["src/views/*"],
+			"@icons"		: ["src/icons/index"],
+			"@icons/*"		: ["src/icons/*"],
+			"@interfaces"	: ["src/interfaces/index"],
+			"@interfaces/*"	: ["src/interfaces/*"],
+			"@containers"	: ["src/containers/index"],
+			"@containers/*"	: ["src/containers/*"]
+		}
+	}
+}
