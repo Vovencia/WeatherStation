@@ -1,0 +1,18 @@
+{
+  "name": "weatherstation-release",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build-client && npm run build-server",
+    "build-client": "npm run build --prefix ../WeatherStation-frontend",
+    "build-server": "npm run build --prefix ../WeatherStation-backend",
+    "start": "node index.js"
+  },
+  "author": "Vovencia",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
