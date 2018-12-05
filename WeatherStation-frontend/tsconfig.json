@@ -46,7 +46,13 @@
 			"@interfaces"	: ["src/interfaces/index"],
 			"@interfaces/*"	: ["src/interfaces/*"],
 			"@containers"	: ["src/containers/index"],
-			"@containers/*"	: ["src/containers/*"]
+			"@containers/*"	: ["src/containers/*"],
+			"@store"		: ["src/store/index"],
+			"@store/*"		: ["src/store/*"],
+			"@actions"		: ["src/store/actions/index"],
+			"@actions/*"	: ["src/store/actions/*"],
+			"@reducers"		: ["src/store/reducers/index"],
+			"@reducers/*"	: ["src/store/reducers/*"]
 		}
 	}
 }

@@ -10,7 +10,7 @@ export default {
 	// concatenateModules: false,
 	splitChunks: {
 		minSize: 1,
-		minChunks: 2,
+		minChunks: 1,
 		cacheGroups: {
 			vendor: {
 				test: /[\\/]node_modules[\\/]/,

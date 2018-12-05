@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Weather Station</title><style>html,
+body,
+#root,
+#root-placeholder {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-grow: 1;
+	margin: 0;
+	padding: 0;
+}
+#root > * {
+	width: 100%;
+}
+#root-placeholder {
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+html {
+	background: #001529;
+}
+/* https://codepen.io/RRoberts/pen/pEXWEp */
+.loader {
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	position: relative;
+	margin: 0 auto;
+	display: block;
+	-webkit-perspective: 120px;
+	-moz-perspective: 120px;
+	-ms-perspective: 120px;
+	perspective: 120px;
+	position: relative;
+}
+.loader:before {
+	content: "";
+	position: absolute;
+	left: 25px;
+	top: 25px;
+	width: 50px;
+	height: 50px;
+	background-color: #3498db;
+	animation: flip 1s infinite;
+}
+
+@keyframes flip {
+	0% {
+		transform: rotate(0);
+	}
+
+	50% {
+		transform: rotateY(180deg);
+	}
+
+	100% {
+		transform: rotateY(180deg)  rotateX(180deg);
+	}
+}</style></head><body><div id="root"><div id="root-placeholder"><a href="#" onclick="event.preventDefault();require('electron').remote.BrowserWindow.getFocusedWindow().webContents.openDevTools();" style="display: block;"><span class="loader"></span></a></div></div><link rel="stylesheet" href="/fonts/Roboto/index.css"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><script type="text/javascript">;(function(){
+	var appendScripts = /MSIE \d|Trident.*rv:/.test(navigator.userAgent);
+	if(!appendScripts) return;
+	document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-shim.min.js"><\/script>');
+	document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"><\/script>');
+	document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"><\/script>');
+	document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.34.2/es6-shim.min.js"><\/script>');
+	document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.34.2/es6-sham.min.js"><\/script>');
+	document.write('<script src="https://wzrd.in/standalone/es7-shim@latest"><\/script>');
+})();
+
+</script><script src="https://api-maps.yandex.ru/2.1/?load=geolocation&amp;lang=ru_RU"></script><script type="text/javascript" src="/scripts/runtime.js"></script><script type="text/javascript" src="/scripts/vendors.js"></script><script type="text/javascript" src="/scripts/components.js"></script><script type="text/javascript" src="/scripts/models.js"></script><script type="text/javascript" src="/scripts/system.js"></script><script type="text/javascript" src="/scripts/app.js"></script></body></html>

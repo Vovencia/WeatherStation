@@ -5,6 +5,7 @@ export default {
 	alias: {
 		'@root'			: root(),
 		'@source'		: source(),
+		'@src'			: source(),
 		'@client'		: client(),
 		'@components'	: client('components'),
 		'@models'		: client('models'),
@@ -16,5 +17,8 @@ export default {
 		'@icons'		: client('icons'),
 		'@interfaces'	: client('interfaces'),
 		'@containers'	: client('containers'),
+		'@store'		: client('store'),
+		'@actions'		: client('store', 'actions'),
+		'@reducers'		: client('store', 'reducers'),
 	}
 }

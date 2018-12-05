@@ -1,0 +1,41 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"allowSyntheticDefaultImports": false,
+		"esModuleInterop": false,
+		"alwaysStrict": true,
+		
+		"target": "es5",
+		"module": "commonjs",
+		"moduleResolution": "node",
+
+		"lib": ["es2015", "es2017", "dom"],
+		"outDir": "build",
+		"watch": true,
+		"sourceMap": true,
+		"jsx": "react",
+		"importHelpers": true,
+
+		"allowJs": true,
+
+		"paths": {
+			"@root"			: ["./index"],
+			"@root/*"		: ["./*"],
+			"@source"		: ["src/index"],
+			"@source/*"		: ["src/*"],
+			"@src"			: ["src/index"],
+			"@src/*"		: ["src/*"],
+			"@api"			: ["src/api/index"],
+			"@api/*"		: ["src/api/*"],
+			"@utils"		: ["src/utils/index"],
+			"@utils/*"		: ["src/utils/*"],
+			"@interfaces"	: ["src/interfaces/index"],
+			"@interfaces/*"	: ["src/interfaces/*"],
+			"@models"	: ["src/models/index"],
+			"@models/*"	: ["src/models/*"],
+		}
+	},
+	"files": [
+		"src/index.ts"
+	]
+}

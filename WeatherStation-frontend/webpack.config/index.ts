@@ -1,6 +1,8 @@
+import * as opn 					from 'opn';
+
 import {source, dist, client, root} from "./_utils";
 import resolve 						from "./resolve";
-import {DEV_PORT} 					from "./_config"
+import {DEV_PORT, SERVER, DEV_URL}		from "./_config"
 
 import module from "./module";
 import _plugins from "./plugins";
@@ -42,6 +44,19 @@ const config = {
 		hot: true,
 		port: DEV_PORT,
 	},
+}
+
+if(SERVER){
+	console.log(`
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	
+	
+		DEV_URL: ${DEV_URL}
+	
+	
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	`);
+	opn(DEV_URL);
 }
 
 export default config;
