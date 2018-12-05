@@ -13,7 +13,7 @@ export const DEV_URL	= `http://localhost:${ DEV_PORT }/`;
 
 export const API_DEV_URL = `http://localhost:${ API_PORT }/`;
 
-export const API_URL = API_DEV_URL;
+export const API_URL = PROD ? '/api/' : API_DEV_URL;
 
 const _preprocessorOptions:any = {
 	MODE,

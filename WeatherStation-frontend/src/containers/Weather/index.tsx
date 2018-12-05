@@ -112,7 +112,7 @@ const mapStateToProps = (state: IStateRoot) => {
 		...state.weather,
 		selectedCity: state.city.woeid,
 		selectedCityTitle: state.city.title,
-		showLoading: state.city.loading || state.weather.loading || state.cityChoose.loading
+		showLoading: state.city.loading || state.weather.loading
 	}
 }
 

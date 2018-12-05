@@ -1,3 +1,4 @@
+module.exports =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -26225,17 +26226,34 @@ var express = __webpack_require__(/*! express */ "../node_modules/express/index.
 var helmet = __webpack_require__(/*! helmet */ "../node_modules/helmet/index.js");
 var _api_1 = __webpack_require__(/*! @api */ "./api/index.ts");
 var shield_1 = __webpack_require__(/*! @utils/shield */ "./utils/shield.ts");
+var isMainModule = true;
+console.log('isMainModule', isMainModule);
 var apiPort = 30001;
-var app = express();
-app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
-app.use(helmet());
-app.use(shield_1.default());
-app.use(_api_1.default);
-app.listen(apiPort);
+var app;
+if (isMainModule) {
+    app = express();
+    app.use(function (req, res, next) {
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        next();
+    });
+    app.use(helmet());
+    app.use(shield_1.default());
+    app.use(_api_1.default);
+    app.listen(apiPort);
+}
+else {
+    app = express.Router();
+    app.use(function (req, res, next) {
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        next();
+    });
+    app.use(helmet());
+    app.use(shield_1.default());
+    app.use(_api_1.default);
+}
+exports.default = app;
 
 
 /***/ }),

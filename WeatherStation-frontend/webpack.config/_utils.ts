@@ -1,4 +1,7 @@
 import * as path from "path"
+
+import {PROD} from "./_config";
+
 export const ROOT = _path(__dirname, '..');
 
 function _path(...args) {
@@ -18,7 +21,7 @@ export function source(...args){
 // }
 
 export function dist(...args){
-	return root("build", ...args);
+	return root( PROD ? '../WeatherStation-release/client' : "build", ...args);
 }
 
 export function client(...args){

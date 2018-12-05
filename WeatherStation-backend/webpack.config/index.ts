@@ -21,6 +21,8 @@ const config = {
 		publicPath: `/`,
 
 		chunkFilename: '[name].js',
+
+		libraryTarget: 'commonjs2',
 	},
 
 	context: source(),

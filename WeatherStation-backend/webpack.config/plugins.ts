@@ -7,7 +7,7 @@ import { CheckerPlugin } 				from 'awesome-typescript-loader'
 import * as webpack 					from 'webpack'
 
 let plugins = [
-	( BUILD ? new CleanWebpackPlugin([ dist('') ], {root: root()}) : false ),
+	( BUILD ? new CleanWebpackPlugin([ dist('') ], {root: dist('..')}) : false ),
 	new CheckerPlugin(),
 	// Watcher doesn't work well if you mistype casing in a path so we use
 	// a plugin that prints an error when you attempt to do this.

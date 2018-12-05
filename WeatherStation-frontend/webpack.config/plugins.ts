@@ -15,7 +15,7 @@ const HtmlWebpackPluginOptions = {
 }
 
 let plugins = [
-	( BUILD ? new CleanWebpackPlugin([ dist('') ], {root: root()}) : false ),
+	( BUILD ? new CleanWebpackPlugin([ dist('') ], {root: dist('..')}) : false ),
 	new CopyWebpackPlugin([
 		{
 			from: client('fonts'),
