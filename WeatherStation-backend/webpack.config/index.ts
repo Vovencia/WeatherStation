@@ -3,11 +3,9 @@ import resolve 						from "./resolve";
 import {DEV_PORT, SERVER, API_URL, WATCH} from "./_config"
 
 import module from "./module";
-import _plugins from "./plugins";
+import plugins from "./plugins";
 import optimization from "./optimization";
 import {PROD} from "./_config";
-
-const plugins = [].concat(_plugins);
 
 const config = {
 	target: "node",
