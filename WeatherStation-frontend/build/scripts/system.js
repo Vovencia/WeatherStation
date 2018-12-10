@@ -15,7 +15,7 @@ var apiUrl = 'http://localhost:30001/';
 if (apiUrl[apiUrl.length - 1] == '/') {
     apiUrl = apiUrl.substring(0, apiUrl.length - 1);
 }
-var api = function () {
+function api() {
     var url = '/';
     var data = null;
     switch (arguments.length) {
@@ -56,7 +56,7 @@ var api = function () {
         console.error(error);
         throw error;
     });
-};
+}
 exports.default = api;
 
 

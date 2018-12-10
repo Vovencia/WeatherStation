@@ -72,22 +72,6 @@ class WeatherItem extends React.Component<IWeatherItemProps> {
 	}
 }
 
-const WeatherItemStyled = styled(WeatherItem)`
-	min-width: 280px;
-	width: 16.666%;
-	&,
-	.weather-item__caption {
-		font-size: ${ (props: IWeatherItemProps) => props.big ? '1.5rem' : '1.2rem' };
-		font-weight: ${ (props: IWeatherItemProps) => props.big ? '400' : '500' };
-	}
-	.weather-item__icon {
-		width: ${ (props: IWeatherItemProps) => props.big ? '60px' : '48px' };
-	}
-	.weather-item__content p {
-		font-size: inherit;
-	}
-`
-
 const WeatherItemIcon = styled("img")`
 `
 
@@ -99,6 +83,24 @@ const WeatherItemWindIcon = styled("img")`
 `
 
 const WeatherItemCaption = styled('span')`
+`
+const WeatherItemContent = styled(CardContent)`
+`
+
+const WeatherItemStyled = styled(WeatherItem)`
+	min-width: 280px;
+	width: 16.666%;
+	&,
+	${ WeatherItemCaption } {
+		font-size: ${ (props: IWeatherItemProps) => props.big ? '1.5rem' : '1.2rem' };
+		font-weight: ${ (props: IWeatherItemProps) => props.big ? '400' : '500' };
+	}
+	${ WeatherItemWindIcon } {
+		width: ${ (props: IWeatherItemProps) => props.big ? '60px' : '48px' };
+	}
+	${ WeatherItemContent } p {
+		font-size: inherit;
+	}
 `
 
 export default WeatherItemStyled;

@@ -6,13 +6,11 @@ if(apiUrl[apiUrl.length - 1] == '/'){
 	apiUrl = apiUrl.substring(0, apiUrl.length - 1);
 }
 
-const api:(
-	(() => Promise<any>)
-	&
-	((url: string) => Promise<any>)
-	&
-	((url: string, data: any) => Promise<any>)
-) = function(){
+function api(): Promise<any>;
+function api(url: string): Promise<any>;
+function api(url: string, data: any): Promise<any>;
+
+function api(){
 	let url = '/';
 	let data = null;
 	switch(arguments.length){

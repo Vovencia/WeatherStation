@@ -259,7 +259,7 @@ var WeatherStyled = styled_components_1.default("div")(templateObject_1 || (temp
 var WeatherContentWrapper = styled_components_1.default("div")(templateObject_2 || (templateObject_2 = tslib_1.__makeTemplateObject(["\n\tdisplay: flex;\n\tflex-grow: 1;\n\talign-items: center;\n\tjustify-content: center;\n"], ["\n\tdisplay: flex;\n\tflex-grow: 1;\n\talign-items: center;\n\tjustify-content: center;\n"])));
 var WeatherItems = styled_components_1.default("div")(templateObject_3 || (templateObject_3 = tslib_1.__makeTemplateObject(["\n\tdisplay: flex;\n\tmargin: 30px 0;\n\tflex-wrap: wrap;\n\twidth: 100%;\n\tjustify-content: center;\n\t> * {\n\t\tpadding: 10px;\n\t}\n"], ["\n\tdisplay: flex;\n\tmargin: 30px 0;\n\tflex-wrap: wrap;\n\twidth: 100%;\n\tjustify-content: center;\n\t> * {\n\t\tpadding: 10px;\n\t}\n"])));
 var mapStateToProps = function (state) {
-    return tslib_1.__assign({}, state.weather, { selectedCity: state.city.woeid, selectedCityTitle: state.city.title, showLoading: state.city.loading || state.weather.loading || state.cityChoose.loading });
+    return tslib_1.__assign({}, state.weather, { selectedCity: state.city.woeid, selectedCityTitle: state.city.title, showLoading: state.city.loading || state.weather.loading });
 };
 var mapDispatchToProps = function (dispatch) {
     return {
