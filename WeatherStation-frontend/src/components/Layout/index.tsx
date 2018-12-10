@@ -1,5 +1,5 @@
 import * as React 				from "react";
-import styled 					from "styled-components";
+import styled, {createGlobalStyle} 					from "styled-components";
 import {Switch, Route} 			from "react-router-dom"
 import {connect}				from "react-redux";
 
@@ -10,11 +10,26 @@ import Weather 					from "@containers/Weather"
 import AppProgress 				from "@containers/AppProgress"
 import ModalCityChoose			from "@containers/ModalCityChoose"
 
-import "./styles.styl"
+const GlobalStyle = createGlobalStyle`
+	html {
+		background: #fafafa;
+	}
+	body, #root, #root-placeholder{
+		height: auto;
+		min-height: 100%;
+	}
+	*,
+	&:before,
+	&:after {
+		box-sizing: padding-box;
+		box-sizing: border-box;
+	}
+`
 
 function Layout(props){
 	return (
 		<LayoutStyled>
+			<GlobalStyle />
 			<AppProgress />
 			<Header />
 			<LayoutContent>
