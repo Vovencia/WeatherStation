@@ -1,24 +1,5 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["components"],{
 
-/***/ "../node_modules/css-loader/index.js!../node_modules/stylus-loader/index.js?!../node_modules/preprocess-loader/index.js?MODE=build&ENV=development&DEV=true&BUILD=true&PROD=false&WATCH=false&SERVER=false&DEV_PORT=30000&API_PORT=30001&DEV_URL=http://localhost:30000/&API_DEV_URL=http://localhost:30001/&API_URL=http://localhost:30001/!./components/Layout/styles.styl":
-/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ../node_modules/css-loader!../node_modules/stylus-loader??ref--5-2!../node_modules/preprocess-loader?MODE=build&ENV=development&DEV=true&BUILD=true&PROD=false&WATCH=false&SERVER=false&DEV_PORT=30000&API_PORT=30001&DEV_URL=http://localhost:30000/&API_DEV_URL=http://localhost:30001/&API_URL=http://localhost:30001/!./components/Layout/styles.styl ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "../node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "html {\n  background: #fafafa;\n}\nbody,\n#root,\n#root-placeholder {\n  height: auto;\n  min-height: 100%;\n}\n*,\n:before,\n:after {\n  box-sizing: padding-box;\n  box-sizing: border-box;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
 /***/ "./components/Footer/index.tsx":
 /*!*************************************!*\
   !*** ./components/Footer/index.tsx ***!
@@ -94,9 +75,10 @@ var Footer_1 = __webpack_require__(/*! @components/Footer */ "./components/Foote
 var Weather_1 = __webpack_require__(/*! @containers/Weather */ "./containers/Weather/index.tsx");
 var AppProgress_1 = __webpack_require__(/*! @containers/AppProgress */ "./containers/AppProgress/index.tsx");
 var ModalCityChoose_1 = __webpack_require__(/*! @containers/ModalCityChoose */ "./containers/ModalCityChoose/index.tsx");
-__webpack_require__(/*! ./styles.styl */ "./components/Layout/styles.styl");
+var GlobalStyle = styled_components_1.createGlobalStyle(templateObject_1 || (templateObject_1 = tslib_1.__makeTemplateObject(["\n\thtml {\n\t\tbackground: #fafafa;\n\t}\n\tbody, #root, #root-placeholder{\n\t\theight: auto;\n\t\tmin-height: 100%;\n\t}\n\t*,\n\t&:before,\n\t&:after {\n\t\tbox-sizing: padding-box;\n\t\tbox-sizing: border-box;\n\t}\n"], ["\n\thtml {\n\t\tbackground: #fafafa;\n\t}\n\tbody, #root, #root-placeholder{\n\t\theight: auto;\n\t\tmin-height: 100%;\n\t}\n\t*,\n\t&:before,\n\t&:after {\n\t\tbox-sizing: padding-box;\n\t\tbox-sizing: border-box;\n\t}\n"])));
 function Layout(props) {
     return (React.createElement(LayoutStyled, null,
+        React.createElement(GlobalStyle, null),
         React.createElement(AppProgress_1.default, null),
         React.createElement(Header_1.default, null),
         React.createElement(LayoutContent, null,
@@ -107,41 +89,11 @@ function Layout(props) {
         React.createElement(Footer_1.default, null),
         React.createElement(ModalCityChoose_1.default, null)));
 }
-var LayoutStyled = styled_components_1.default("div")(templateObject_1 || (templateObject_1 = tslib_1.__makeTemplateObject(["\n\tdisplay: flex;\n\tflex-direction: column;\n"], ["\n\tdisplay: flex;\n\tflex-direction: column;\n"])));
+var LayoutStyled = styled_components_1.default("div")(templateObject_2 || (templateObject_2 = tslib_1.__makeTemplateObject(["\n\tdisplay: flex;\n\tflex-direction: column;\n"], ["\n\tdisplay: flex;\n\tflex-direction: column;\n"])));
 exports.default = Layout;
-var LayoutContent = styled_components_1.default("div")(templateObject_2 || (templateObject_2 = tslib_1.__makeTemplateObject(["\n\tdisplay: flex;\n\tflex-direction: column;\n\tflex-grow: 1;\n\tflex-shrink: 0;\n"], ["\n\tdisplay: flex;\n\tflex-direction: column;\n\tflex-grow: 1;\n\tflex-shrink: 0;\n"])));
-var templateObject_1, templateObject_2;
+var LayoutContent = styled_components_1.default("div")(templateObject_3 || (templateObject_3 = tslib_1.__makeTemplateObject(["\n\tdisplay: flex;\n\tflex-direction: column;\n\tflex-grow: 1;\n\tflex-shrink: 0;\n"], ["\n\tdisplay: flex;\n\tflex-direction: column;\n\tflex-grow: 1;\n\tflex-shrink: 0;\n"])));
+var templateObject_1, templateObject_2, templateObject_3;
 
-
-/***/ }),
-
-/***/ "./components/Layout/styles.styl":
-/*!***************************************!*\
-  !*** ./components/Layout/styles.styl ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/stylus-loader??ref--5-2!../../../node_modules/preprocess-loader?MODE=build&ENV=development&DEV=true&BUILD=true&PROD=false&WATCH=false&SERVER=false&DEV_PORT=30000&API_PORT=30001&DEV_URL=http://localhost:30000/&API_DEV_URL=http://localhost:30001/&API_URL=http://localhost:30001/!./styles.styl */ "../node_modules/css-loader/index.js!../node_modules/stylus-loader/index.js?!../node_modules/preprocess-loader/index.js?MODE=build&ENV=development&DEV=true&BUILD=true&PROD=false&WATCH=false&SERVER=false&DEV_PORT=30000&API_PORT=30001&DEV_URL=http://localhost:30000/&API_DEV_URL=http://localhost:30001/&API_URL=http://localhost:30001/!./components/Layout/styles.styl");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "../node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
 
 /***/ }),
 
@@ -214,12 +166,13 @@ var WeatherItem = /** @class */ (function (_super) {
     };
     return WeatherItem;
 }(React.Component));
-var WeatherItemStyled = styled_components_1.default(WeatherItem)(templateObject_1 || (templateObject_1 = tslib_1.__makeTemplateObject(["\n\tmin-width: 280px;\n\twidth: 16.666%;\n\t&,\n\t.weather-item__caption {\n\t\tfont-size: ", ";\n\t\tfont-weight: ", ";\n\t}\n\t.weather-item__icon {\n\t\twidth: ", ";\n\t}\n\t.weather-item__content p {\n\t\tfont-size: inherit;\n\t}\n"], ["\n\tmin-width: 280px;\n\twidth: 16.666%;\n\t&,\n\t.weather-item__caption {\n\t\tfont-size: ", ";\n\t\tfont-weight: ", ";\n\t}\n\t.weather-item__icon {\n\t\twidth: ", ";\n\t}\n\t.weather-item__content p {\n\t\tfont-size: inherit;\n\t}\n"])), function (props) { return props.big ? '1.5rem' : '1.2rem'; }, function (props) { return props.big ? '400' : '500'; }, function (props) { return props.big ? '60px' : '48px'; });
-var WeatherItemIcon = styled_components_1.default("img")(templateObject_2 || (templateObject_2 = tslib_1.__makeTemplateObject(["\n"], ["\n"])));
-var WeatherItemWindIcon = styled_components_1.default("img")(templateObject_3 || (templateObject_3 = tslib_1.__makeTemplateObject(["\n\twidth: 1em;\n\tdisplay: inline-block;\n\tvertical-align: middle;\n\tmargin-left: 0.2em;\n"], ["\n\twidth: 1em;\n\tdisplay: inline-block;\n\tvertical-align: middle;\n\tmargin-left: 0.2em;\n"])));
-var WeatherItemCaption = styled_components_1.default('span')(templateObject_4 || (templateObject_4 = tslib_1.__makeTemplateObject(["\n"], ["\n"])));
+var WeatherItemIcon = styled_components_1.default("img")(templateObject_1 || (templateObject_1 = tslib_1.__makeTemplateObject(["\n"], ["\n"])));
+var WeatherItemWindIcon = styled_components_1.default("img")(templateObject_2 || (templateObject_2 = tslib_1.__makeTemplateObject(["\n\twidth: 1em;\n\tdisplay: inline-block;\n\tvertical-align: middle;\n\tmargin-left: 0.2em;\n"], ["\n\twidth: 1em;\n\tdisplay: inline-block;\n\tvertical-align: middle;\n\tmargin-left: 0.2em;\n"])));
+var WeatherItemCaption = styled_components_1.default('span')(templateObject_3 || (templateObject_3 = tslib_1.__makeTemplateObject(["\n"], ["\n"])));
+var WeatherItemContent = styled_components_1.default(CardContent_1.default)(templateObject_4 || (templateObject_4 = tslib_1.__makeTemplateObject(["\n"], ["\n"])));
+var WeatherItemStyled = styled_components_1.default(WeatherItem)(templateObject_5 || (templateObject_5 = tslib_1.__makeTemplateObject(["\n\tmin-width: 280px;\n\twidth: 16.666%;\n\t&,\n\t", " {\n\t\tfont-size: ", ";\n\t\tfont-weight: ", ";\n\t}\n\t", " {\n\t\twidth: ", ";\n\t}\n\t", " p {\n\t\tfont-size: inherit;\n\t}\n"], ["\n\tmin-width: 280px;\n\twidth: 16.666%;\n\t&,\n\t", " {\n\t\tfont-size: ", ";\n\t\tfont-weight: ", ";\n\t}\n\t", " {\n\t\twidth: ", ";\n\t}\n\t", " p {\n\t\tfont-size: inherit;\n\t}\n"])), WeatherItemCaption, function (props) { return props.big ? '1.5rem' : '1.2rem'; }, function (props) { return props.big ? '400' : '500'; }, WeatherItemWindIcon, function (props) { return props.big ? '60px' : '48px'; }, WeatherItemContent);
 exports.default = WeatherItemStyled;
-var templateObject_1, templateObject_2, templateObject_3, templateObject_4;
+var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5;
 
 
 /***/ })
