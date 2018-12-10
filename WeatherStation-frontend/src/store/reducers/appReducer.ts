@@ -1,5 +1,5 @@
-import {appState} from "@store/initialStates";
+import { appState } from "@store/initialStates";
 
-export default function weatherReducer (state = appState, action){
+export default function weatherReducer(state = appState, action) {
 	return state;
 }

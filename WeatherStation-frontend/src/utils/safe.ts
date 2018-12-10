@@ -1,8 +1,11 @@
-export default function safe(handler: () => void, errorHandler?: (e: Error) => void){
+export default function safe(
+	handler: () => void,
+	errorHandler?: (e: Error) => void
+) {
 	try {
 		return handler();
-	} catch(e){
+	} catch (e) {
 		console.error(e);
-		if(errorHandler) errorHandler(e);
+		if (errorHandler) errorHandler(e);
 	}
 }

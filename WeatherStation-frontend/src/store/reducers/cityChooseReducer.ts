@@ -1,42 +1,44 @@
-import {cityChooseState} 			from "@store/initialStates";
+import { cityChooseState } from "@store/initialStates";
 import {
 	CITY_CHOOSE_START_LOADING,
 	CITY_CHOOSE_DONE_LOADING,
 	CITY_CHOOSE_OPEN,
-	CITY_CHOOSE_CLOSE,
-} 									from "@actions/cityChooseActions";
+	CITY_CHOOSE_CLOSE
+} from "@actions/cityChooseActions";
 
-import ICityResultItem 				from "@interfaces/ICityResultItem"
+import ICityResultItem from "@interfaces/ICityResultItem";
 
-export default function cityChooseReducer (state = cityChooseState, action){
-	switch(action.type){
+export default function cityChooseReducer(state = cityChooseState, action) {
+	switch (action.type) {
 		case CITY_CHOOSE_START_LOADING:
 			state = {
 				...state,
 				loading: true,
-				query: action.value,
-			}
-		break;
+				query: action.value
+			};
+			break;
 		case CITY_CHOOSE_DONE_LOADING:
-			const cities: (ICityResultItem[]) = Array.isArray(action.value) ? action.value : [];
+			const cities: ICityResultItem[] = Array.isArray(action.value)
+				? action.value
+				: [];
 			state = {
 				...state,
 				loading: false,
-				result: cities,
-			}
-		break;
+				result: cities
+			};
+			break;
 		case CITY_CHOOSE_OPEN:
 			state = {
 				...state,
-				open: true,
-			}
-		break;
+				open: true
+			};
+			break;
 		case CITY_CHOOSE_CLOSE:
 			state = {
 				...state,
-				open: false,
-			}
-		break;
+				open: false
+			};
+			break;
 	}
 	return state;
 }

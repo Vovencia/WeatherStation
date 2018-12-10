@@ -26134,17 +26134,21 @@ var makeOk_1 = __webpack_require__(/*! @utils/makeOk */ "./utils/makeOk.ts");
 var makeError_1 = __webpack_require__(/*! @utils/makeError */ "./utils/makeError.ts");
 var city_1 = __webpack_require__(/*! @models/city */ "./models/city/index.ts");
 var router = express_1.Router();
-router.get('/by-name/:cityName', function (req, res) {
-    city_1.findByName(req.params.cityName).then(function (data) {
+router.get("/by-name/:cityName", function (req, res) {
+    city_1.findByName(req.params.cityName)
+        .then(function (data) {
         send_1.default(res, makeOk_1.default(data));
-    }).catch(function (error) {
+    })
+        .catch(function (error) {
         send_1.default(res, makeError_1.default(error.message));
     });
 });
-router.get('/by-coordinates/:latt,:long', function (req, res) {
-    city_1.findByCoordinates(req.params.latt, req.params.long).then(function (data) {
+router.get("/by-coordinates/:latt,:long", function (req, res) {
+    city_1.findByCoordinates(req.params.latt, req.params.long)
+        .then(function (data) {
         send_1.default(res, makeOk_1.default(data));
-    }).catch(function (error) {
+    })
+        .catch(function (error) {
         send_1.default(res, makeError_1.default(error.message));
     });
 });
@@ -26168,12 +26172,12 @@ var express_1 = __webpack_require__(/*! express */ "../node_modules/express/inde
 var city_1 = __webpack_require__(/*! @api/city */ "./api/city/index.ts");
 var weather_1 = __webpack_require__(/*! @api/weather */ "./api/weather/index.ts");
 var router = express_1.Router();
-router.use('/city', city_1.default);
-router.use('/weather', weather_1.default);
+router.use("/city", city_1.default);
+router.use("/weather", weather_1.default);
 router.use(function (req, res) {
     res.status(404).json({
-        type: 'error',
-        value: 'Page not found',
+        type: "error",
+        value: "Page not found"
     });
 });
 exports.default = router;
@@ -26198,10 +26202,12 @@ var makeOk_1 = __webpack_require__(/*! @utils/makeOk */ "./utils/makeOk.ts");
 var makeError_1 = __webpack_require__(/*! @utils/makeError */ "./utils/makeError.ts");
 var weather_1 = __webpack_require__(/*! @models/weather */ "./models/weather/index.ts");
 var router = express_1.Router();
-router.get('/:cityWoeid', function (req, res) {
-    weather_1.getWeather(req.params.cityWoeid).then(function (data) {
+router.get("/:cityWoeid", function (req, res) {
+    weather_1.getWeather(req.params.cityWoeid)
+        .then(function (data) {
         send_1.default(res, makeOk_1.default(data));
-    }).catch(function (error) {
+    })
+        .catch(function (error) {
         console.error(error);
         send_1.default(res, makeError_1.default(error.message));
     });
@@ -26265,23 +26271,28 @@ exports.default = app;
 Object.defineProperty(exports, "__esModule", { value: true });
 var cross_fetch_1 = __webpack_require__(/*! cross-fetch */ "../node_modules/cross-fetch/dist/node-ponyfill.js");
 exports.findByName = function (name) {
-    return cross_fetch_1.default("https://www.metaweather.com/api/location/search/?query=" + name).then(function (res) {
+    return cross_fetch_1.default("https://www.metaweather.com/api/location/search/?query=" + name)
+        .then(function (res) {
         return res.json();
-    }).then(function (data) {
+    })
+        .then(function (data) {
         if (data && data.length)
             return data;
         return [];
     });
 };
 exports.findByCoordinates = function (latt, long) {
-    return cross_fetch_1.default("https://www.metaweather.com/api/location/search/?lattlong=" + latt + "," + long).then(function (res) {
+    return cross_fetch_1.default("https://www.metaweather.com/api/location/search/?lattlong=" + latt + "," + long)
+        .then(function (res) {
         return res.json();
-    }).then(function (data) {
+    })
+        .then(function (data) {
         if (data && data.length)
             return data;
         return [];
-    }).then(function (data) {
-        return data.sort(function (a, b) { return (a.distance - b.distance); });
+    })
+        .then(function (data) {
+        return data.sort(function (a, b) { return a.distance - b.distance; });
     });
 };
 
@@ -26300,10 +26311,14 @@ exports.findByCoordinates = function (latt, long) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var cross_fetch_1 = __webpack_require__(/*! cross-fetch */ "../node_modules/cross-fetch/dist/node-ponyfill.js");
 exports.getWeather = function (cityWoeid) {
-    return cross_fetch_1.default("https://www.metaweather.com/api/location/" + cityWoeid).then(function (res) {
+    return cross_fetch_1.default("https://www.metaweather.com/api/location/" + cityWoeid)
+        .then(function (res) {
         return res.json();
-    }).then(function (data) {
-        if (data && data.consolidated_weather && data.consolidated_weather.length)
+    })
+        .then(function (data) {
+        if (data &&
+            data.consolidated_weather &&
+            data.consolidated_weather.length)
             return data.consolidated_weather;
         return [];
     });
@@ -26325,7 +26340,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var makeResponse_1 = __webpack_require__(/*! @utils/makeResponse */ "./utils/makeResponse.ts");
 function makeError(value) {
     return makeResponse_1.default("error", {
-        message: value,
+        message: value
     });
 }
 exports.default = makeError;
@@ -26416,7 +26431,7 @@ var send = function () {
     }
     var status = 200;
     var res = args[0];
-    var result = '';
+    var result = "";
     switch (args.length) {
         case 2:
             result = args[1];
@@ -26453,18 +26468,20 @@ var makeError_1 = __webpack_require__(/*! @utils/makeError */ "./utils/makeError
 var storage = {};
 var requestCount = 20;
 var resetDelay = 3000;
-exports.default = (function () { return function requestShield(req, res, next) {
-    var ip = ((req.headers['x-forwarded-for'] || req.connection.remoteAddress).toString())[1];
-    if (!storage[ip])
-        storage[ip] = 0;
-    storage[ip]++;
-    if (storage[ip] >= requestCount) {
-        storage[ip] = requestCount;
-        send_1.default(res, 429, makeError_1.default("Too Many Requests"));
-        return;
-    }
-    next();
-}; });
+exports.default = (function () {
+    return function requestShield(req, res, next) {
+        var ip = (req.headers["x-forwarded-for"] || req.connection.remoteAddress).toString()[1];
+        if (!storage[ip])
+            storage[ip] = 0;
+        storage[ip]++;
+        if (storage[ip] >= requestCount) {
+            storage[ip] = requestCount;
+            send_1.default(res, 429, makeError_1.default("Too Many Requests"));
+            return;
+        }
+        next();
+    };
+});
 setInterval(function () {
     storage = {};
 }, resetDelay);

@@ -1,0 +1,19 @@
+{
+	"defaultSeverity": "error",
+	"extends": [
+		"tslint:recommended",
+		"tslint-config-standard",
+		"tslint-react",
+		"tslint-config-prettier"
+	],
+	"jsRules": {},
+	"rules": {
+		"order-imports": false,
+		"object-literal-sort-keys": false,
+		"member-ordering": false,
+		"jsx-no-lambda": false,
+		"jsx-bollean-value": false,
+		"indent": [true, "tabs", 2]
+	},
+	"rulesDirectory": []
+}
